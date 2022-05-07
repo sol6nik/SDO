@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "MosSdo",
+    "slug": "MosSdo",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "MosSdo"
+}
