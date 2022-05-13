@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, ScrollView, SafeAreaView, TouchableOpacity, TextInput } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 
 
 import { Ionicons } from '@expo/vector-icons';
@@ -10,6 +10,7 @@ import SliderCourses from '../../interactive/sliderCourses';
 
 
 export default function MainScreen({ navigation }) {
+
     return (
         <SafeAreaView>
             <ScrollView>
@@ -48,6 +49,7 @@ export default function MainScreen({ navigation }) {
                     <SliderCourses />
                 </View>
             </ScrollView>
+
         </SafeAreaView>
     )
 }

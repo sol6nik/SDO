@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet, TextInput, ScrollView } from 'react-native'
+import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet, TextInput, ScrollView, Alert } from 'react-native'
 import React from 'react'
 
 import { Ionicons } from '@expo/vector-icons';
@@ -43,7 +43,7 @@ export default function shedulesScreen({ navigation }) {
 
                         <Text style={{ marginTop: 15, fontSize: 15, color: '#999999' }}>ПК321</Text>
 
-                        <TouchableOpacity style={styles.cardBtn}>
+                        <TouchableOpacity style={styles.cardBtn} onPress={() => Alert.alert('Add task')}>
                             <Text style={{ color: '#393A39', marginRight: 5, fontSize: 15 }}>Добавить задачу</Text>
                             <Ionicons name="add-circle-sharp" size={20} color="#393A39" />
                         </TouchableOpacity>
@@ -63,7 +63,7 @@ export default function shedulesScreen({ navigation }) {
 
                         <Text style={{ marginTop: 15, fontSize: 15, color: '#999999' }}>ПК321</Text>
 
-                        <TouchableOpacity style={styles.cardBtn}>
+                        <TouchableOpacity style={styles.cardBtn} onPress={() => Alert.alert('Add task')}>
                             <Text style={{ color: '#393A39', marginRight: 5, fontSize: 15 }}>Добавить задачу</Text>
                             <Ionicons name="add-circle-sharp" size={20} color="#393A39" />
                         </TouchableOpacity>
@@ -83,7 +83,7 @@ export default function shedulesScreen({ navigation }) {
 
                         <Text style={{ marginTop: 15, fontSize: 15, color: '#999999' }}>ПК321</Text>
 
-                        <TouchableOpacity style={styles.cardBtn}>
+                        <TouchableOpacity style={styles.cardBtn} onPress={() => Alert.alert('Add task')}>
                             <Text style={{ color: '#393A39', marginRight: 5, fontSize: 15 }}>Добавить задачу</Text>
                             <Ionicons name="add-circle-sharp" size={20} color="#393A39" />
                         </TouchableOpacity>
@@ -103,7 +103,7 @@ export default function shedulesScreen({ navigation }) {
 
                         <Text style={{ marginTop: 15, fontSize: 15, color: '#999999' }}>ПК321</Text>
 
-                        <TouchableOpacity style={styles.cardBtn}>
+                        <TouchableOpacity style={styles.cardBtn} onPress={() => Alert.alert('Add task')}>
                             <Text style={{ color: '#393A39', marginRight: 5, fontSize: 15 }}>Добавить задачу</Text>
                             <Ionicons name="add-circle-sharp" size={20} color="#393A39" />
                         </TouchableOpacity>

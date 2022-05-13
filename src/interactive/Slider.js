@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Text, View, SafeAreaView, TouchableOpacity } from 'react-native';
+import { Text, View, SafeAreaView, TouchableOpacity, Alert } from 'react-native';
+
 
 import Carousel from 'react-native-snap-carousel';
 
@@ -67,8 +68,10 @@ export default class Slider extends React.Component {
                         borderRadius: 10,
                         justifyContent: 'center',
                         alignItems: 'center'
-                    }}>
-                        <Text style={{ color: '#000', fontWeight:'bold' }}>Домашняя работа</Text>
+                    }}
+                        onPress={() => Alert.alert('Home work task')}
+                    >
+                        <Text style={{ color: '#000', fontWeight: 'bold' }}>Домашняя работа</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity style={{
@@ -78,12 +81,13 @@ export default class Slider extends React.Component {
                         borderRadius: 10,
                         justifyContent: 'center',
                         alignItems: 'center'
-                    }}>
-                        <Text style={{ color: '#000', fontWeight:'bold' }}>Добавить задачу</Text>
+                    }}
+                        onPress={() => Alert.alert('Add task')}
+                    >
+                        <Text style={{ color: '#000', fontWeight: 'bold' }}>Добавить задачу</Text>
                     </TouchableOpacity>
                 </View>
             </View>
-
         )
     }
 

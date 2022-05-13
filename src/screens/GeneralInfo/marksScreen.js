@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput, Alert } from 'react-native'
 import React from 'react'
 
 import { Ionicons } from '@expo/vector-icons';
@@ -34,7 +34,7 @@ export default function marksScreen({ navigation }) {
                         </View>
 
 
-                        <TouchableOpacity style={styles.btnCard}>
+                        <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
                             <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
                         </TouchableOpacity>
                     </View>
@@ -49,7 +49,7 @@ export default function marksScreen({ navigation }) {
                         </View>
 
 
-                        <TouchableOpacity style={styles.btnCard}>
+                        <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
                             <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
                         </TouchableOpacity>
                     </View>
@@ -64,7 +64,7 @@ export default function marksScreen({ navigation }) {
                         </View>
 
 
-                        <TouchableOpacity style={styles.btnCard}>
+                        <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
                             <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
                         </TouchableOpacity>
                     </View>
@@ -79,7 +79,7 @@ export default function marksScreen({ navigation }) {
                         </View>
 
 
-                        <TouchableOpacity style={styles.btnCard}>
+                        <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
                             <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
                         </TouchableOpacity>
                     </View>

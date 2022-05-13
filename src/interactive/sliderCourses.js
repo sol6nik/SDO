@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, View, SafeAreaView, TouchableOpacity, Image } from 'react-native';
+import { Text, View, SafeAreaView, TouchableOpacity, Image, Alert } from 'react-native';
 
 import Carousel from 'react-native-snap-carousel';
 
@@ -50,7 +50,14 @@ export default class SliderCourses extends React.Component {
                 marginRight: 25,
             }}>
 
-                <Image source={{ uri: 'https://goo.su/2ks0v5' }} style={{ width: '100%', height: 150, marginBottom: 5, borderRadius: 5 }} />
+                <Image source={{ uri: 'https://goo.su/2ks0v5' }}
+                    style={{
+                        width: '100%',
+                        height: 150,
+                        marginBottom: 5,
+                        borderRadius: 5
+                    }}
+                />
 
                 <Text style={{
                     color: '#000',
@@ -67,8 +74,10 @@ export default class SliderCourses extends React.Component {
                         borderRadius: 10,
                         justifyContent: 'center',
                         alignItems: 'center'
-                    }}>
-                        <Text style={{ color: '#000', fontWeight: 'bold' }}>Выполнить</Text>
+                    }}
+                        onPress={() => Alert.alert('Complete course task')}
+                    >
+                        <Text style={{ color: '#000', fontWeight: 'bold' }}>Домашняя работа</Text>
                     </TouchableOpacity>
                 </View>
             </View>
