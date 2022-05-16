@@ -42,7 +42,7 @@ export default class SliderCourses extends React.Component {
     _renderItem({ item, index }) {
         return (
             <View style={{
-                backgroundColor: 'floralwhite',
+                backgroundColor: '#fff',
                 borderRadius: 10,
                 height: 'auto',
                 padding: 20,

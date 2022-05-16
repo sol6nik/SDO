@@ -46,7 +46,7 @@ export default class HW extends React.Component {
     _renderItem({ item, index }) {
         return (
             <View style={{
-                backgroundColor: 'floralwhite',
+                backgroundColor: '#fff',
                 borderRadius: 10,
                 height: 200,
                 padding: 20,

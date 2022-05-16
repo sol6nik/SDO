@@ -9,7 +9,7 @@ export default function coursesScreen({ navigation }) {
         <SafeAreaView style={styles.container}>
             <ScrollView>
                 <View style={styles.header}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
                         <Ionicons name="ios-person-circle-sharp" size={25} color="#393A39" />
                     </TouchableOpacity>
 

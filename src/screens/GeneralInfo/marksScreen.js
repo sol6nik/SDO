@@ -10,7 +10,7 @@ export default function marksScreen({ navigation }) {
             <ScrollView>
                 <View style={styles.container}>
                     <View style={styles.header}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
                             <Ionicons name="ios-person-circle-sharp" size={25} color="#393A39" />
                         </TouchableOpacity>
 
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
         height: 206,
         width: 350,
         elevation: 3,
-        backgroundColor: '#FEFAEF',
+        backgroundColor: '#fff',
         borderRadius: 10,
         padding: 20
     },

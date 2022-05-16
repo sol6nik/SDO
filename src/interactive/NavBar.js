@@ -47,7 +47,6 @@ const NavBar = () => {
                     <Ionicons name={'ios-star'} size={20} style={{ color: '#999999' }} />
                 )
             }} />
-
         </Tab.Navigator>
     )
 }
