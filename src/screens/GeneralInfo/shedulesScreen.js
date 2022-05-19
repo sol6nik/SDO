@@ -1,5 +1,6 @@
 import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet, TextInput, ScrollView, Alert } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
+
 
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
@@ -7,7 +8,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import WeekCalendar from '../../interactive/WeekCalendar';
 
 export default function shedulesScreen({ navigation }) {
-
+    const [date, setDate] = useState(new Date());
     return (
         <SafeAreaView>
             <ScrollView>
@@ -26,7 +27,7 @@ export default function shedulesScreen({ navigation }) {
                             <Ionicons name="notifications" size={25} color="#393A39" />
                         </TouchableOpacity>
                     </View>
-                    <WeekCalendar />
+                    <WeekCalendar date={date} onChange={(newDate) => setDate(newDate)} />
 
 
                     <View style={styles.card}>

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ScrollView, SafeAreaView, TouchableOpacity, TextInput } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, SafeAreaView, TouchableOpacity, TextInput, Alert } from 'react-native'
 import React, { useState } from 'react'
 
 
@@ -24,7 +24,7 @@ export default function MainScreen({ navigation }) {
                         <TextInput placeholder='search' />
                     </View>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => Alert.alert('NOTIFICATIONS')}>
                         <Ionicons name="notifications" size={25} color="#393A39" />
                     </TouchableOpacity>
                 </View>
