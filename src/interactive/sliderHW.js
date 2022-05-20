@@ -2,9 +2,9 @@ import * as React from 'react';
 import { Text, View, SafeAreaView, TouchableOpacity, Alert } from 'react-native';
 
 import Carousel from 'react-native-snap-carousel';
+
+
 export default class HW extends React.Component {
-
-
     constructor(props) {
         super(props);
         this.state = {
@@ -50,7 +50,6 @@ export default class HW extends React.Component {
                 borderRadius: 10,
                 height: 200,
                 padding: 20,
-                marginLeft: 25,
                 marginRight: 25,
             }}>
                 <View style={{ flexDirection: 'row' }}>
@@ -61,10 +60,10 @@ export default class HW extends React.Component {
                         {item.time}
                     </Text>
                 </View>
-                <Text style={{ fontSize: 20, marginBottom: 3 }}>{item.title}</Text>
+                <Text style={{ fontSize: 18, marginBottom: 3,fontWeight:'bold' }}>{item.title}</Text>
                 <Text style={{ fontSize: 14, marginBottom: 27 }}>{item.description}</Text>
 
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={{ justifyContent: 'space-between', alignItems: 'center' }}>
                     <TouchableOpacity style={{
                         width: 300,
                         height: 41,

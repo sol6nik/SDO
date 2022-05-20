@@ -46,7 +46,6 @@ export default class SliderCourses extends React.Component {
                 borderRadius: 10,
                 height: 'auto',
                 padding: 20,
-                marginLeft: 25,
                 marginRight: 25,
             }}>
 
@@ -66,7 +65,8 @@ export default class SliderCourses extends React.Component {
 
                 <Text style={{ fontSize: 14, marginBottom: 27 }}>{item.description}</Text>
 
-                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+
+                <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                     <TouchableOpacity style={{
                         width: 300,
                         height: 41,

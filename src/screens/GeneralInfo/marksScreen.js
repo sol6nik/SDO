@@ -24,64 +24,66 @@ export default function marksScreen({ navigation }) {
                         </TouchableOpacity>
                     </View>
 
-                    <View style={styles.card}>
-                        <Text style={styles.title}>Русский язык и культура речи</Text>
-                        <View style={styles.mark}>
-                            <Text style={{ fontSize: 12, color: '#999999' }}>Оценка</Text>
-                            <View style={styles.points}>
-                                <Text style={{ fontWeight: 'bold', color: '#fff' }}>88,81</Text>
+                    <View style={styles.cardContainer}>
+                        <View style={styles.card}>
+                            <Text style={styles.title}>Русский язык и культура речи</Text>
+                            <View style={styles.mark}>
+                                <Text style={{ fontSize: 12, color: '#999999' }}>Оценка</Text>
+                                <View style={styles.points}>
+                                    <Text style={{ fontWeight: 'bold', color: '#fff' }}>88,81</Text>
+                                </View>
                             </View>
+
+
+                            <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
+                                <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
+                            </TouchableOpacity>
                         </View>
 
-
-                        <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
-                            <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style={styles.card}>
-                        <Text style={styles.title}>Русский язык и культура речи</Text>
-                        <View style={styles.mark}>
-                            <Text style={{ fontSize: 12, color: '#999999' }}>Оценка</Text>
-                            <View style={styles.points}>
-                                <Text style={{ fontWeight: 'bold', color: '#fff' }}>88,81</Text>
+                        <View style={styles.card}>
+                            <Text style={styles.title}>Русский язык и культура речи</Text>
+                            <View style={styles.mark}>
+                                <Text style={{ fontSize: 12, color: '#999999' }}>Оценка</Text>
+                                <View style={styles.points}>
+                                    <Text style={{ fontWeight: 'bold', color: '#fff' }}>88,81</Text>
+                                </View>
                             </View>
+
+
+                            <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
+                                <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
+                            </TouchableOpacity>
                         </View>
 
-
-                        <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
-                            <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style={styles.card}>
-                        <Text style={styles.title}>Русский язык и культура речи</Text>
-                        <View style={styles.mark}>
-                            <Text style={{ fontSize: 12, color: '#999999' }}>Оценка</Text>
-                            <View style={styles.points}>
-                                <Text style={{ fontWeight: 'bold', color: '#fff' }}>88,81</Text>
+                        <View style={styles.card}>
+                            <Text style={styles.title}>Русский язык и культура речи</Text>
+                            <View style={styles.mark}>
+                                <Text style={{ fontSize: 12, color: '#999999' }}>Оценка</Text>
+                                <View style={styles.points}>
+                                    <Text style={{ fontWeight: 'bold', color: '#fff' }}>88,81</Text>
+                                </View>
                             </View>
+
+
+                            <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
+                                <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
+                            </TouchableOpacity>
                         </View>
 
-
-                        <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
-                            <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
-                        </TouchableOpacity>
-                    </View>
-
-                    <View style={styles.card}>
-                        <Text style={styles.title}>Русский язык и культура речи</Text>
-                        <View style={styles.mark}>
-                            <Text style={{ fontSize: 12, color: '#999999' }}>Оценка</Text>
-                            <View style={styles.points}>
-                                <Text style={{ fontWeight: 'bold', color: '#fff' }}>88,81</Text>
+                        <View style={styles.card}>
+                            <Text style={styles.title}>Русский язык и культура речи</Text>
+                            <View style={styles.mark}>
+                                <Text style={{ fontSize: 12, color: '#999999' }}>Оценка</Text>
+                                <View style={styles.points}>
+                                    <Text style={{ fontWeight: 'bold', color: '#fff' }}>88,81</Text>
+                                </View>
                             </View>
+
+
+                            <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
+                                <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
+                            </TouchableOpacity>
                         </View>
-
-
-                        <TouchableOpacity style={styles.btnCard} onPress={() => Alert.alert('About mark')}>
-                            <Text style={{ fontWeight: 'bold' }}>Подробнее</Text>
-                        </TouchableOpacity>
                     </View>
                 </View>
             </ScrollView>
@@ -119,11 +121,13 @@ const styles = StyleSheet.create({
     card: {
         marginTop: 20,
         height: 206,
-        width: 350,
+        width: 330,
         elevation: 3,
         backgroundColor: '#fff',
         borderRadius: 10,
-        padding: 20
+        padding: 20,
+        justifyContent: 'center',
+        align: 'center'
     },
     title: {
         fontSize: 16,
@@ -146,11 +150,15 @@ const styles = StyleSheet.create({
         borderRadius: 15
     },
     btnCard: {
-        width: 320,
+        width: 290,
         height: 40,
         backgroundColor: '#8FB2E6',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10
+    },
+    cardContainer: {
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })

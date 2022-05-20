@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet, Image } from 'react-native'
+import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet, Alert } from 'react-native'
 import React from 'react'
 
 import { Ionicons } from '@expo/vector-icons';
@@ -16,54 +16,59 @@ export default function PersonalMenu({ navigation: { goBack, navigate } }) {
                     <Text style={{ color: '#393A39' }}>На главную</Text>
                 </TouchableOpacity>
 
-                <Image source={require('../../images/AvatarPerson.png')} style={styles.imageProfile} />
+                <View style={{ alignItems: 'center' }}>
+                    <View style={styles.profileMenu}>
+                        <TouchableOpacity style={styles.componentsMenu} onPress={() => navigate('Account')}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                                <AntDesign name="infocirlce" size={20} color="#90B3E7" style={{ marginRight: 10 }} />
+                                <Text style={{ fontWeight: 'bold' }}>О пользователе</Text>
+                            </View>
+                            <MaterialIcons name="navigate-next" size={20} color="#999999" style={{ marginLeft: 140 }} />
+                        </TouchableOpacity>
 
-                <View style={styles.profileMenu}>
-                    <TouchableOpacity style={styles.componentsMenu} onPress={() => navigate('Account')}>
-                        <AntDesign name="infocirlce" size={20} color="#90B3E7" />
-                        <Text style={{ fontWeight: 'bold' }}>О пользователе</Text>
-                        <MaterialIcons name="navigate-next" size={20} color="#999999" style={{ marginLeft: 140 }} />
-                    </TouchableOpacity>
+                        <TouchableOpacity style={styles.componentsMenu} onPress={() => navigate('Sdo')}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                                <Ionicons name="person" size={20} color="#90B3E7" style={{ marginRight: 10 }} />
+                                <Text style={{ fontWeight: 'bold' }}>Учтеная запись</Text>
+                            </View>
+                            <MaterialIcons name="navigate-next" size={20} color="#999999" style={{ marginLeft: 140 }} />
+                        </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.componentsMenu} onPress={() => navigate('Sdo')}>
-                        <Ionicons name="person" size={20} color="#90B3E7" />
-                        <Text style={{ fontWeight: 'bold' }}>Учтеная запись</Text>
-                        <MaterialIcons name="navigate-next" size={20} color="#999999" style={{ marginLeft: 140 }} />
-                    </TouchableOpacity>
+                        <TouchableOpacity style={styles.componentsMenu} onPress={() => navigate('User')}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                                <MaterialIcons name="settings" size={20} color="#90B3E7" style={{ marginRight: 10 }} />
+                                <Text style={{ fontWeight: 'bold' }}>Настройки СДО</Text>
+                            </View>
+                            <MaterialIcons name="navigate-next" size={20} color="#999999" style={{ marginLeft: 140 }} />
+                        </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.componentsMenu} onPress={() => navigate('User')}>
-                        <MaterialIcons name="settings" size={20} color="#90B3E7" />
-                        <Text style={{ fontWeight: 'bold' }}>Настройки СДО</Text>
-                        <MaterialIcons name="navigate-next" size={20} color="#999999" style={{ marginLeft: 140 }} />
+                        <TouchableOpacity style={styles.componentsMenu} onPress={() => Alert.alert('Window is under construction')}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                                <AntDesign name="questioncircle" size={20} color="#90B3E7" style={{ marginRight: 10 }} />
+                                <Text style={{ fontWeight: 'bold' }}>FAQ</Text>
+                            </View>
+                            <MaterialIcons name="navigate-next" size={20} color="#999999" style={{ marginLeft: 140 }} />
+                        </TouchableOpacity>
+                    </View>
+
+                    <TouchableOpacity style={styles.btnExit} onPress={() => navigate('Authorization')}>
+                        <Text style={{ fontWeight: 'bold', textAlign: 'center' }}>Выйти из учетной записи</Text>
                     </TouchableOpacity>
                 </View>
-
-                <TouchableOpacity onPress={() => navigate('Authorization')}>
-                    <View style={styles.btnExit}>
-                        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-                            <AntDesign name="logout" size={20} color="#90B3E7" style={{ marginRight: 5 }} />
-                            <Text style={{ fontWeight: 'bold' }}>Выход</Text>
-                        </View>
-                    </View>
-                </TouchableOpacity>
             </View>
-        </SafeAreaView>
+        </SafeAreaView >
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        padding: 20,
-        alignItems: 'center',
+        padding: 10,
         backgroundColor: '#F0F0F0'
     },
     btnBack: {
-        marginRight: 250,
-        marginTop: 20,
-        marginBottom: 20,
+        marginTop: 50,
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center',
     },
     imageProfile: {
         marginTop: 15,
@@ -73,7 +78,7 @@ const styles = StyleSheet.create({
     profileMenu: {
         marginTop: 20,
         width: 350,
-        height: 144,
+        height: 'auto',
         alignItems: 'center',
         justifyContent: 'center',
         padding: 20,

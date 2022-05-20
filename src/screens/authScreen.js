@@ -2,7 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image, TouchableOpacity, TextInput } from "react-native"
 import InputFields from "../customComponents/InputFields";
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { Entypo } from '@expo/vector-icons';
+import { Feather } from '@expo/vector-icons';
+
 
 export default function Login({ navigation }) {
     return (
@@ -18,8 +19,8 @@ export default function Login({ navigation }) {
 
 
                     <InputFields label={'Email'} icon={
-                        <Entypo
-                            name="email"
+                        <Feather
+                            name="mail"
                             size={20}
                             color="#B3B4BA"
                             style={{ marginRight: 5 }}

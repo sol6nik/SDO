@@ -43,7 +43,7 @@ export default class Slider extends React.Component {
                 borderRadius: 10,
                 height: 200,
                 padding: 20,
-                marginLeft: 25,
+                // marginLeft: 25,
                 marginRight: 25,
             }}>
                 <View style={{ flexDirection: 'row' }}>
@@ -58,7 +58,7 @@ export default class Slider extends React.Component {
                         {item.time}
                     </Text>
                 </View>
-                <Text style={{ fontSize: 20, marginBottom: 27 }}>{item.title}</Text>
+                <Text style={{ fontSize: 18, marginBottom: 27, width: 200, fontWeight: 'bold' }}>{item.title}</Text>
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <TouchableOpacity style={{

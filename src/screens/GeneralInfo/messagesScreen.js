@@ -6,8 +6,9 @@ import { FontAwesome } from '@expo/vector-icons';
 
 export default function messagesScreen({ navigation }) {
     return (
-        <SafeAreaView style={styles.container}>
-            <ScrollView>
+        <ScrollView>
+            <SafeAreaView style={styles.container}>
+
                 <View style={styles.header}>
                     <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
                         <Ionicons name="ios-person-circle-sharp" size={25} color="#393A39" />
@@ -25,89 +26,293 @@ export default function messagesScreen({ navigation }) {
 
                 <TouchableOpacity>
                     <View style={styles.card}>
-                        <Image source={require('../../images/avatar7.png')} style={styles.icon} />
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/45.jpg'
+                        }}
+                            style={styles.icon} />
                         <View>
                             <Text style={{
-                                width: 253,
-                                fontSize: 17,
+                                fontSize: 15,
                                 fontWeight: 'bold'
-                            }}>Иван Иванов</Text>
-                            <Text style={{ width: 253 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quod.</Text>
+                            }}>Flossie Walter</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
                     <View style={styles.card}>
-                        <Image source={require('../../images/avatar7.png')} style={styles.icon} />
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/53.jpg'
+                        }}
+                            style={styles.icon} />
                         <View>
                             <Text style={{
-                                width: 253,
-                                fontSize: 17,
+                                fontSize: 15,
                                 fontWeight: 'bold'
-                            }}>Иван Иванов</Text>
-                            <Text style={{ width: 253 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quod.</Text>
+                            }}>Amya Ryan</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
                     <View style={styles.card}>
-                        <Image source={require('../../images/avatar7.png')} style={styles.icon} />
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/443.jpg'
+                        }}
+                            style={styles.icon} />
                         <View>
                             <Text style={{
-                                width: 253,
-                                fontSize: 17,
+                                fontSize: 15,
                                 fontWeight: 'bold'
-                            }}>Иван Иванов</Text>
-                            <Text style={{ width: 253 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quod.</Text>
+                            }}>Lamar Klein</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
                     <View style={styles.card}>
-                        <Image source={require('../../images/avatar7.png')} style={styles.icon} />
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/252.jpg'
+                        }}
+                            style={styles.icon} />
                         <View>
                             <Text style={{
-                                width: 253,
-                                fontSize: 17,
+                                fontSize: 15,
                                 fontWeight: 'bold'
-                            }}>Иван Иванов</Text>
-                            <Text style={{ width: 253 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quod.</Text>
+                            }}>Meggie Hermann</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
                     <View style={styles.card}>
-                        <Image source={require('../../images/avatar7.png')} style={styles.icon} />
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/269.jpg'
+                        }}
+                            style={styles.icon} />
                         <View>
                             <Text style={{
-                                width: 253,
-                                fontSize: 17,
+                                fontSize: 15,
                                 fontWeight: 'bold'
-                            }}>Иван Иванов</Text>
-                            <Text style={{ width: 253 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quod.</Text>
+                            }}>Eriberto Bashirian</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity>
                     <View style={styles.card}>
-                        <Image source={require('../../images/avatar7.png')} style={styles.icon} />
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/208.jpg'
+                        }}
+                            style={styles.icon} />
                         <View>
                             <Text style={{
-                                width: 253,
-                                fontSize: 17,
+                                fontSize: 15,
                                 fontWeight: 'bold'
-                            }}>Иван Иванов</Text>
-                            <Text style={{ width: 253 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, quod.</Text>
+                            }}>Joana Sporer</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
                         </View>
                     </View>
                 </TouchableOpacity>
-            </ScrollView>
-        </SafeAreaView>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/45.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Flossie Walter</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/53.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Amya Ryan</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/443.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Lamar Klein</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/252.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Meggie Hermann</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/269.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Eriberto Bashirian</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/208.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Joana Sporer</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/45.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Flossie Walter</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/53.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Amya Ryan</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/443.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Lamar Klein</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/252.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Meggie Hermann</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/269.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Eriberto Bashirian</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
+                    <View style={styles.card}>
+                        <Image source={{
+                            uri: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/208.jpg'
+                        }}
+                            style={styles.icon} />
+                        <View>
+                            <Text style={{
+                                fontSize: 15,
+                                fontWeight: 'bold'
+                            }}>Joana Sporer</Text>
+                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                        </View>
+                    </View>
+                </TouchableOpacity>
+            </SafeAreaView>
+        </ScrollView>
     )
 }
 
@@ -117,19 +322,13 @@ const styles = StyleSheet.create({
     },
     card: {
         flexDirection: 'row',
-        width: 350,
-        height: 80,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-        borderRadius: 15,
-        marginBottom: 10,
-        elevation: 3
+        marginBottom: 15,
     },
     icon: {
-        width: 50,
-        height: 50,
-        marginRight: 10
+        width: 40,
+        height: 40,
+        marginRight: 10,
+        borderRadius: 100
     },
     header: {
         padding: 20,
@@ -150,8 +349,8 @@ const styles = StyleSheet.create({
         padding: 15,
         paddingVertical: 0,
         backgroundColor: '#B0B7BD',
+        borderRadius: 10,
         borderRadius: 10
     },
-
 })
 
