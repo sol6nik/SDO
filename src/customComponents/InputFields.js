@@ -26,6 +26,7 @@ export default function InputFields({ label, icon, inputType, keyboardType, fiel
                     placeholder={label}
                     keyboardType={keyboardType}
                     style={{ flex: 1, paddingVertical: 0 }}
+                    onChangeText={newText => inputFunction(newText)}
                 />
             )}
 

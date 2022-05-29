@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image, TouchableOpacity, TextInput } from "react-native"
-import InputFields from "../customComponents/InputFields";
+import CustomInput from "../customComponents/CustomInput";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Feather } from '@expo/vector-icons';
-
+import axios from 'axios'
 
 export default function Login({ navigation }) {
+
+    const [loginInput, setLoginInput] = useState('')
+    const [passwordInput, setPasswordInput] = useState('')
+
+    const login_attempt = async (data) => {
+        axios_cfg = { url: "https://mospolylms.herokuapp.com/api/v1/auth/login", method: "POST", data: { login: data.loginInput.toLowerCase(), password: data.passwordInput } }
+        try {
+            var anwser = await axios(axios_cfg);
+            localStorage.setItem("accessToken", anwser.accessToken)
+            navigation.navigate('Guest')
+        }
+        catch (err) {
+            console.log('Some error appeared during request: ' + err.message)
+        }
+    }
+
     return (
         <SafeAreaView>
             <View style={styles.container}>
@@ -18,7 +34,7 @@ export default function Login({ navigation }) {
                     <Text style={{ marginBottom: 25, fontSize: 25, fontWeight: "bold" }}>Авторизация</Text>
 
 
-                    <InputFields label={'Email'} icon={
+                    <CustomInput label={'Email'} icon={
                         <Feather
                             name="mail"
                             size={20}
@@ -26,21 +42,26 @@ export default function Login({ navigation }) {
                             style={{ marginRight: 5 }}
                         />
                     }
+                        inputFunction={login => setLoginInput(login)}
                         keyboardType="email-address"
                     />
 
-                    <InputFields label={'Пароль'} icon={
-                        <Ionicons
-                            name="ios-lock-closed-outline"
-                            size={20}
-                            color="#B3B4BA"
-                            style={{ marginRight: 5 }}
-                        />
-                    }
-                        inputType="Password"
+                    <CustomInput
+                        label={'Пароль'}
+                        icon={
+                            <Ionicons
+                                name="ios-lock-closed-outline"
+                                size={20}
+                                color="#B3B4BA"
+                                style={{ marginRight: 5 }}
+                            />
+                        }
+                        isPassword={true}
+                        inputFunction={pass => setPasswordInput(pass)}
+                        keyboardType="default"
                     />
 
-                    <TouchableOpacity style={styles.btnEnter}>
+                    <TouchableOpacity style={styles.btnEnter} onPress={() => login_attempt({ loginInput, passwordInput })}>
                         <Text style={{ color: '#FFFFFF' }}>Войти</Text>
                     </TouchableOpacity>
 
