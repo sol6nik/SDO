@@ -4,7 +4,7 @@ import React from 'react'
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
-export default function coursesScreen({ navigation }) {
+export default function CoursesScreen({ navigation }) {
     return (
         <ScrollView>
 

@@ -1,14 +1,38 @@
 import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet, TextInput, ScrollView, Alert } from 'react-native'
-import React, { useState } from 'react'
-
-
+import React, { useState,useEffect } from 'react'
+import axios from 'axios';
+import localStorage from '@react-native-async-storage/async-storage'
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import WeekCalendar from '../../interactive/WeekCalendar';
+import TimetableItem from '../../customComponents/TimetableItem';
 
-export default function shedulesScreen({ navigation }) {
-    const [date, setDate] = useState(new Date());
+export default function ShedulesScreen({ navigation }) {
+    const [date,setDate] = useState(new Date().getDay());
+    const [lessonsArray,setLessonsArray] = useState([])
+    const [timetableArray,setTimetableArray] = useState([])
+
+    const getTimetableArray = async() => {
+        var group_number = await localStorage.getItem('user_group')
+        let axios_cfg = { url: `https://mospolylms.herokuapp.com/api/v1/public/timetables/${group_number}`, method: "GET"}
+        try {
+            var anwser = await axios(axios_cfg);
+            setTimetableArray(anwser.data.timetable)
+        }
+        catch(err){
+            console.log('There is some error during getting data: ' + JSON.stringify(err.response.data.message))
+        }
+    }
+
+    useEffect(()=>{
+        setLessonsArray(timetableArray[date])
+    },[date,timetableArray])
+
+    useEffect(()=>{
+        getTimetableArray();
+    },[])
+
     return (
         <SafeAreaView>
             <ScrollView>
@@ -27,89 +51,17 @@ export default function shedulesScreen({ navigation }) {
                             <Ionicons name="notifications" size={25} color="#393A39" />
                         </TouchableOpacity>
                     </View>
-                    <WeekCalendar date={date} onChange={(newDate) => setDate(newDate)} />
-
+                    <WeekCalendar picked_day={date} intialDate={new Date()} onChange={newDate => setDate(newDate)} />
+        
                     <View style={styles.cardContainer}>
                         <View style={styles.cardContainer}>
-                            <View style={styles.card}>
-                                <View style={styles.cardHeader}>
-                                    <View style={styles.numLess}>
-                                        <Text style={{ color: '#fff' }}>1</Text>
-                                    </View>
-                                    <Text style={{ marginRight: 100 }}>Лекция</Text>
-                                    <Text>9:00 - 10:30</Text>
-                                </View>
-
-                                <Text style={{ marginTop: 15, fontSize: 17, fontWeight: 'bold' }}>Физика</Text>
-                                <Text style={{ marginTop: 5, fontSize: 14 }}>Иванов Иван</Text>
-
-                                <Text style={{ marginTop: 10, fontSize: 15, color: '#999999' }}>ПК321</Text>
-
-                                <TouchableOpacity style={styles.cardBtn} onPress={() => Alert.alert('Add task')}>
-                                    <Text style={{ color: '#393A39', marginRight: 5, fontSize: 15 }}>Добавить задачу</Text>
-                                    <Ionicons name="add-circle-sharp" size={20} color="#393A39" />
-                                </TouchableOpacity>
-                            </View>
-
-                            <View style={styles.card}>
-                                <View style={styles.cardHeader}>
-                                    <View style={styles.numLess}>
-                                        <Text style={{ color: '#fff' }}>2</Text>
-                                    </View>
-                                    <Text style={{ marginRight: 100 }}>Лекция</Text>
-                                    <Text>10:40 - 12:10</Text>
-                                </View>
-
-                                <Text style={{ marginTop: 15, fontSize: 17, fontWeight: 'bold' }}>Высшая математика</Text>
-                                <Text style={{ marginTop: 5, fontSize: 14 }}>Иванов Иван</Text>
-
-                                <Text style={{ marginTop: 10, fontSize: 15, color: '#999999' }}>ПК321</Text>
-
-                                <TouchableOpacity style={styles.cardBtn} onPress={() => Alert.alert('Add task')}>
-                                    <Text style={{ color: '#393A39', marginRight: 5, fontSize: 15 }}>Добавить задачу</Text>
-                                    <Ionicons name="add-circle-sharp" size={20} color="#393A39" />
-                                </TouchableOpacity>
-                            </View>
-
-                            <View style={styles.card}>
-                                <View style={styles.cardHeader}>
-                                    <View style={styles.numLess}>
-                                        <Text style={{ color: '#fff' }}>3</Text>
-                                    </View>
-                                    <Text style={{ marginRight: 100 }}>Лекция</Text>
-                                    <Text>12:20 - 13:50</Text>
-                                </View>
-
-                                <Text style={{ marginTop: 15, fontSize: 17, fontWeight: 'bold' }}>Проектная деятельность</Text>
-                                <Text style={{ marginTop: 5, fontSize: 14 }}>Иванов Иван</Text>
-
-                                <Text style={{ marginTop: 10, fontSize: 15, color: '#999999' }}>ПК321</Text>
-
-                                <TouchableOpacity style={styles.cardBtn} onPress={() => Alert.alert('Add task')}>
-                                    <Text style={{ color: '#393A39', marginRight: 5, fontSize: 15 }}>Добавить задачу</Text>
-                                    <Ionicons name="add-circle-sharp" size={20} color="#393A39" />
-                                </TouchableOpacity>
-                            </View>
-
-                            <View style={styles.card}>
-                                <View style={styles.cardHeader}>
-                                    <View style={styles.numLess}>
-                                        <Text style={{ color: '#fff' }}>4</Text>
-                                    </View>
-                                    <Text style={{ marginRight: 50 }}>Лекция</Text>
-                                    <Text>14:30 - 16:00</Text>
-                                </View>
-
-                                <Text style={{ marginTop: 15, fontSize: 17, fontWeight: 'bold' }}>Линейная алгебра</Text>
-                                <Text style={{ marginTop: 5, fontSize: 14 }}>Иванов Иван</Text>
-
-                                <Text style={{ marginTop: 10, fontSize: 15, color: '#999999' }}>ПК321</Text>
-
-                                <TouchableOpacity style={styles.cardBtn} onPress={() => Alert.alert('Add task')}>
-                                    <Text style={{ color: '#393A39', marginRight: 5, fontSize: 15 }}>Добавить задачу</Text>
-                                    <Ionicons name="add-circle-sharp" size={20} color="#393A39" />
-                                </TouchableOpacity>
-                            </View>
+                            {lessonsArray!==undefined ?  
+                            lessonsArray.map((item => (
+                                <TimetableItem key={"key"+Math.random()} lesson_count = {item.lesson_count} lesson_type={item.lesson_type} schedule_time={item.schedule_time} lesson_subject={item.lesson_subject} teacher_fio={item.teacher_fio} lesson_location={item.lesson_location}/>)
+                            )) 
+                            : 
+                            <Text>Sorry there is no timetable for your group now</Text>
+                            }
                         </View>
                     </View>
                 </View>

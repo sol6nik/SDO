@@ -4,7 +4,7 @@ import React from 'react'
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
-export default function messagesScreen({ navigation }) {
+export default function MessagesScreen({ navigation }) {
     return (
         <ScrollView>
             <SafeAreaView style={styles.container}>

@@ -1,24 +1,22 @@
-import { addDays, format, getDate, isSameDay, startOfWeek } from 'date-fns';
+import { addDays, format, getDate, startOfWeek } from 'date-fns';
 import ru from 'date-fns/locale/ru';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
-const WeekCalendar = ({ date, onChange }) => {
+const WeekCalendar = ({ picked_day,intialDate, onChange }) => {
     const [week, setWeek] = useState([]);
 
     useEffect(() => {
-        const weekDays = getWeekDays(date);
+        const weekDays = getWeekDays(intialDate);
         setWeek(weekDays);
-    }, [date]);
+    }, [picked_day]);
 
     return (
         <View style={styles.container}>
             {week.map((weekDay) => {
                 const textStyles = [styles.label];
                 const touchable = [styles.touchable];
-
-                const sameDay = isSameDay(weekDay.date, date);
-                if (sameDay) {
+                if (weekDay.date.getDay() === picked_day) {
                     textStyles.push(styles.selectedLabel);
                     touchable.push(styles.selectedTouchable);
                 }
@@ -27,7 +25,7 @@ const WeekCalendar = ({ date, onChange }) => {
                     <View style={styles.weekDayItem} key={weekDay.formatted}>
                         <Text style={styles.weekDayText}>{weekDay.formatted}</Text>
                         <TouchableOpacity
-                            onPress={() => onChange(weekDay.date)}
+                            onPress={() => {onChange(weekDay.date.getDay())}}
                             style={touchable}>
                             <Text style={textStyles}>{weekDay.day}</Text>
                         </TouchableOpacity>

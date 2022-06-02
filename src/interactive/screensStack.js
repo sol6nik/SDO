@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Login from "../screens/authScreen";
 import NavBar from "./NavBar";
+import NewNavBar from "./NewNavBar"
 import PersonalMenu from "../screens/personalOption/personalMenu";
 import AboutAccount from "../screens/personalOption/aboutAccount";
 import OptionsSdo from "../screens/personalOption/optionsSdo";
@@ -14,7 +15,7 @@ export default function ScreensStacks() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name='Authorization' component={Login} />
-            <Stack.Screen name='Guest' component={NavBar} />
+            <Stack.Screen name='MainScreen' component={NewNavBar} />
             <Stack.Screen name='Profile' component={PersonalMenu} />
             <Stack.Screen name='Account' component={AboutAccount} />
             <Stack.Screen name='Sdo' component={OptionsSdo} />

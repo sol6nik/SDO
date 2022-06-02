@@ -4,6 +4,8 @@ import CustomInput from "../customComponents/CustomInput";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Feather } from '@expo/vector-icons';
 import axios from 'axios'
+import authScreenFunctions from '../js/authFunctions'
+import authFunctions from "../js/authFunctions";
 
 export default function Login({ navigation }) {
 
@@ -14,8 +16,8 @@ export default function Login({ navigation }) {
         axios_cfg = { url: "https://mospolylms.herokuapp.com/api/v1/auth/login", method: "POST", data: { login: data.loginInput.toLowerCase(), password: data.passwordInput } }
         try {
             var anwser = await axios(axios_cfg);
-            localStorage.setItem("accessToken", anwser.accessToken)
-            navigation.navigate('Guest')
+            authScreenFunctions.setData(anwser.data)
+            navigation.navigate('MainScreen')
         }
         catch (err) {
             console.log('Some error appeared during request: ' + err.message)
@@ -69,7 +71,7 @@ export default function Login({ navigation }) {
                         <Text>Забыли логин или пароль?</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ marginTop: 20 }} onPress={() => navigation.navigate('Guest')}>
+                    <TouchableOpacity style={{ marginTop: 20 }} onPress={() => {authFunctions.setGuestData();navigation.navigate('MainScreen')}}>
                         <Text>Зайти гостем</Text>
                     </TouchableOpacity>
                 </View>
