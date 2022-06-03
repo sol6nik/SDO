@@ -1,5 +1,5 @@
 import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet, TextInput, ScrollView, Alert } from 'react-native'
-import React, { useState, useEffect } from 'react'
+import React, { useState,useEffect } from 'react'
 import axios from 'axios';
 import localStorage from '@react-native-async-storage/async-storage'
 import { Ionicons } from '@expo/vector-icons';
@@ -9,53 +9,58 @@ import WeekCalendar from '../../interactive/WeekCalendar';
 import TimetableItem from '../../customComponents/TimetableItem';
 
 export default function ShedulesScreen({ navigation }) {
-    const [date, setDate] = useState(new Date().getDay());
-    const [lessonsArray, setLessonsArray] = useState([])
-    const [timetableArray, setTimetableArray] = useState([])
+    const [date,setDate] = useState(new Date().getDay());
+    const [lessonsArray,setLessonsArray] = useState([])
+    const [timetableArray,setTimetableArray] = useState([])
 
-    const getTimetableArray = async () => {
+    const getTimetableArray = async() => {
         var group_number = await localStorage.getItem('user_group')
-        let axios_cfg = { url: `https://mospolylms.herokuapp.com/api/v1/public/timetables/${group_number}`, method: "GET" }
+        let axios_cfg = { url: `https://mospolylms.herokuapp.com/api/v1/public/timetables/${group_number}`, method: "GET"}
         try {
             var anwser = await axios(axios_cfg);
             setTimetableArray(anwser.data.timetable)
         }
-        catch (err) {
+        catch(err){
             console.log('There is some error during getting data: ' + JSON.stringify(err.response.data.message))
         }
     }
 
-    useEffect(() => {
+    useEffect(()=>{
         setLessonsArray(timetableArray[date])
-    }, [date, timetableArray])
+    },[date,timetableArray])
 
-    useEffect(() => {
+    useEffect(()=>{
         getTimetableArray();
-    }, [])
+    },[])
 
     return (
         <SafeAreaView>
             <ScrollView>
                 <View style={styles.container}>
-                    <WeekCalendar picked_day={date} intialDate={new Date()} onChange={newDate => setDate(newDate)} />
+                    <View style={styles.header}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+                            <Ionicons name="ios-person-circle-sharp" size={25} color="#393A39" />
+                        </TouchableOpacity>
 
+                        <View style={styles.search}>
+                            <FontAwesome name="search" size={15} color="#393A39" style={{ marginRight: 10 }} />
+                            <TextInput placeholder='search' />
+                        </View>
+
+                        <TouchableOpacity>
+                            <Ionicons name="notifications" size={25} color="#393A39" />
+                        </TouchableOpacity>
+                    </View>
+                    <WeekCalendar picked_day={date} intialDate={new Date()} onChange={newDate => setDate(newDate)} />
+        
                     <View style={styles.cardContainer}>
                         <View style={styles.cardContainer}>
-                            {lessonsArray !== undefined ?
-                                lessonsArray.map((item => (
-                                    <TimetableItem key={"key" + Math.random()}
-                                        lesson_count={item.lesson_count}
-                                        lesson_type={item.lesson_type}
-                                        schedule_time={item.schedule_time}
-                                        lesson_subject={item.lesson_subject}
-                                        teacher_fio={item.teacher_fio}
-                                        lesson_location={item.lesson_location}
-
-                                    />
-                                )
-                                ))
-                                :
-                                <Text>Sorry there is no timetable for your group now</Text>
+                            {lessonsArray!==undefined ?  
+                            lessonsArray.map((item => (
+                                <TimetableItem key={"key"+Math.random()} lesson_count = {item.lesson_count} lesson_type={item.lesson_type} schedule_time={item.schedule_time} lesson_subject={item.lesson_subject} teacher_fio={item.teacher_fio} lesson_location={item.lesson_location}/>)
+                            )) 
+                            : 
+                            <Text>Sorry there is no timetable for your group now</Text>
                             }
                         </View>
                     </View>
@@ -68,7 +73,6 @@ export default function ShedulesScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         padding: 10,
-        marginBottom: '20%'
     },
     header: {
         padding: 20,

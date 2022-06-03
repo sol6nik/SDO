@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
         padding: 7.5,
         height: 35,
         width: 35,
+        backgroundColor: '#FFFFFF'
     },
     selectedTouchable: {
         backgroundColor: '#90B3E7',

@@ -15,6 +15,20 @@ export default function MainScreen({ navigation }) {
         <SafeAreaView>
             <ScrollView>
                 <View style={styles.container}>
+                    <View style={styles.header}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+                            <Ionicons name="ios-person-circle-sharp" size={25} color="#393A39" />
+                        </TouchableOpacity>
+
+                        <View style={styles.search}>
+                            <FontAwesome name="search" size={15} color="#393A39" style={{ marginRight: 10 }} />
+                            <TextInput placeholder='search' />
+                        </View>
+
+                        <TouchableOpacity onPress={() => Alert.alert('NOTIFICATIONS')}>
+                            <Ionicons name="notifications" size={25} color="#393A39" />
+                        </TouchableOpacity>
+                    </View>
 
                     <View>
                         <Text style={{ marginTop: 20, fontSize: 25, fontWeight: 'bold' }}>Следующая пара</Text>
@@ -44,8 +58,7 @@ export default function MainScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
-        marginBottom: '20%'
+        padding: 10
     },
     header: {
         padding: 20,
