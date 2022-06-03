@@ -1,14 +1,11 @@
-import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet, TextInput, ScrollView, Alert } from 'react-native'
+import { View, Text, SafeAreaView, StyleSheet, ScrollView } from 'react-native'
 import React, { useState,useEffect } from 'react'
 import axios from 'axios';
 import localStorage from '@react-native-async-storage/async-storage'
-import { Ionicons } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
-import { MaterialIcons } from '@expo/vector-icons';
 import WeekCalendar from '../../interactive/WeekCalendar';
 import TimetableItem from '../../customComponents/TimetableItem';
 
-export default function ShedulesScreen({ navigation }) {
+export default function ShedulesScreen() {
     const [date,setDate] = useState(new Date().getDay());
     const [lessonsArray,setLessonsArray] = useState([])
     const [timetableArray,setTimetableArray] = useState([])
@@ -37,20 +34,6 @@ export default function ShedulesScreen({ navigation }) {
         <SafeAreaView>
             <ScrollView>
                 <View style={styles.container}>
-                    <View style={styles.header}>
-                        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-                            <Ionicons name="ios-person-circle-sharp" size={25} color="#393A39" />
-                        </TouchableOpacity>
-
-                        <View style={styles.search}>
-                            <FontAwesome name="search" size={15} color="#393A39" style={{ marginRight: 10 }} />
-                            <TextInput placeholder='search' />
-                        </View>
-
-                        <TouchableOpacity>
-                            <Ionicons name="notifications" size={25} color="#393A39" />
-                        </TouchableOpacity>
-                    </View>
                     <WeekCalendar picked_day={date} intialDate={new Date()} onChange={newDate => setDate(newDate)} />
         
                     <View style={styles.cardContainer}>

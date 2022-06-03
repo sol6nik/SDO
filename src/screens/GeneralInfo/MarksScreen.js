@@ -1,28 +1,12 @@
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, TextInput, Alert } from 'react-native'
+import { View, Text, StyleSheet, SafeAreaView, ScrollView, TouchableOpacity, Alert } from 'react-native'
 import React from 'react'
 
-import { Ionicons } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
 
-export default function MarksScreen({ navigation }) {
+export default function MarksScreen() {
     return (
         <SafeAreaView>
             <ScrollView>
                 <View style={styles.container}>
-                    <View style={styles.header}>
-                        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-                            <Ionicons name="ios-person-circle-sharp" size={25} color="#393A39" />
-                        </TouchableOpacity>
-
-                        <View style={styles.search}>
-                            <FontAwesome name="search" size={15} color="#393A39" style={{ marginRight: 10 }} />
-                            <TextInput placeholder='search' />
-                        </View>
-
-                        <TouchableOpacity>
-                            <Ionicons name="notifications" size={25} color="#393A39" />
-                        </TouchableOpacity>
-                    </View>
 
                     <View style={styles.cardContainer}>
                         <View style={styles.card}>
