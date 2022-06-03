@@ -9,20 +9,6 @@ export default function MarksScreen({ navigation }) {
         <SafeAreaView>
             <ScrollView>
                 <View style={styles.container}>
-                    <View style={styles.header}>
-                        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-                            <Ionicons name="ios-person-circle-sharp" size={25} color="#393A39" />
-                        </TouchableOpacity>
-
-                        <View style={styles.search}>
-                            <FontAwesome name="search" size={15} color="#393A39" style={{ marginRight: 10 }} />
-                            <TextInput placeholder='search' />
-                        </View>
-
-                        <TouchableOpacity>
-                            <Ionicons name="notifications" size={25} color="#393A39" />
-                        </TouchableOpacity>
-                    </View>
 
                     <View style={styles.cardContainer}>
                         <View style={styles.card}>
@@ -95,7 +81,8 @@ export default function MarksScreen({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 20
+        padding: 20,
+        marginBottom: '20%'
     },
     header: {
         padding: 20,

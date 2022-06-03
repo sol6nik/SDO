@@ -9,21 +9,6 @@ export default function CoursesScreen({ navigation }) {
         <ScrollView>
 
             <SafeAreaView style={styles.container}>
-                <View style={styles.header}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
-                        <Ionicons name="ios-person-circle-sharp" size={25} color="#393A39" />
-                    </TouchableOpacity>
-
-                    <View style={styles.search}>
-                        <FontAwesome name="search" size={15} color="#393A39" style={{ marginRight: 10 }} />
-                        <TextInput placeholder='search' />
-                    </View>
-
-                    <TouchableOpacity>
-                        <Ionicons name="notifications" size={25} color="#393A39" />
-                    </TouchableOpacity>
-                </View>
-
                 <TouchableOpacity>
                     <View style={styles.card}>
                         <Image source={require('../../images/avatar1.png')} style={styles.icon} />
@@ -235,6 +220,7 @@ export default function CoursesScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         padding: 10,
+        marginBottom: '20%'
     },
     card: {
         flexDirection: 'row',
