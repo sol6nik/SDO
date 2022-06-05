@@ -56,6 +56,7 @@ export default function ShedulesScreen() {
 const styles = StyleSheet.create({
     container: {
         padding: 10,
+        marginBottom: '18%'
     },
     header: {
         padding: 20,

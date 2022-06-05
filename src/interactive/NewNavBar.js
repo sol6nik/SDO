@@ -17,6 +17,7 @@ import Shedules_SVG from './../icons/tab-icons/timetable_icon.svg'
 
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import { Font } from 'expo'
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -45,14 +46,16 @@ function LogoTitle() {
 
 const NewNavBar = () => {
     return (
+
         <Tab.Navigator
             screenOptions={{
                 tabBarActiveTintColor: '#90B3E7',
                 tabBarStyle: styles.navBar,
                 headerStyle: { backgroundColor: '#fff', borderBottomLeftRadius: 25, borderBottomRightRadius: 25 },
                 tabBarShowLabel: false,
-                tabBarHideOnKeyboard: true
-            }}>
+                tabBarHideOnKeyboard: true,
+            }
+            }>
             <Tab.Screen
                 name="XXX"
                 component={MainScreen}
@@ -60,47 +63,72 @@ const NewNavBar = () => {
                     tabBarIcon: ({ focused }) => (
                         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                             <Main_SVG />
-                            <Text style={{ fontSize: 11 }}>Главная</Text>
+                            <Text style={{
+                                fontSize: 11,
+                                color: focused ? '#90B3E7' : '#999999',
+                            }}>
+                                Главная
+                            </Text>
                         </View>
                     ),
-                    headerTitle: (props) => <LogoTitle {...props} />
+                    headerTitle: (props) => <LogoTitle {...props} />,
                 }}
             />
             <Tab.Screen name="ZZZ" component={CoursesScreen} options={{
-                tabBarIcon: () => (
+                tabBarIcon: ({ focused }) => (
                     <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                         <Courses_SVG />
-                        <Text style={{ fontSize: 11 }}>Курсы</Text>
+                        <Text style={{
+                            fontSize: 11,
+                            color: focused ? '#90B3E7' : '#999999'
+                        }}>
+                            Курсы
+                        </Text>
                     </View>
                 ),
                 headerTitle: (props) => <LogoTitle {...props} />
             }} />
             <Tab.Screen name="YYY" component={MessagesScreen} options={{
                 tabBarLabel: 'Сообщения',
-                tabBarIcon: () => (
+                tabBarIcon: ({ focused }) => (
                     <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                         <Messages_SVG />
-                        <Text style={{ fontSize: 11 }}>Сообщения</Text>
+                        <Text style={{
+                            fontSize: 11,
+                            color: focused ? '#90B3E7' : '#999999'
+                        }}>
+                            Сообщения
+                        </Text>
                     </View>
                 ),
                 headerTitle: (props) => <LogoTitle {...props} />
             }} />
             <Tab.Screen name="WWW" component={MarksScreen} options={{
                 tabBarLabel: 'Оценки',
-                tabBarIcon: () => (
+                tabBarIcon: ({ focused }) => (
                     <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                         <Marks_SVG />
-                        <Text style={{ fontSize: 11 }}>Оценки</Text>
+                        <Text style={{
+                            fontSize: 11,
+                            color: focused ? '#90B3E7' : '#999999'
+                        }}>
+                            Оценки
+                        </Text>
                     </View>
                 ),
                 headerTitle: (props) => <LogoTitle {...props} />
             }} />
             <Tab.Screen name="BBB" component={ShedulesScreen} options={{
                 tabBarLabel: 'Расписание',
-                tabBarIcon: () => (
+                tabBarIcon: ({ focused }) => (
                     <View style={{ justifyContent: 'center', alignItems: 'center' }}>
                         <Shedules_SVG />
-                        <Text style={{ fontSize: 11 }}>Расписание</Text>
+                        <Text style={{
+                            fontSize: 11,
+                            color: focused ? '#90B3E7' : '#999999'
+                        }}>
+                            Расписание
+                        </Text>
                     </View>
                 ),
                 headerTitle: (props) => <LogoTitle {...props} />

@@ -17,7 +17,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Flossie Walter</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -33,7 +40,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Amya Ryan</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -49,7 +63,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Lamar Klein</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -65,7 +86,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Meggie Hermann</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -81,7 +109,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Eriberto Bashirian</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -97,7 +132,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Joana Sporer</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -113,7 +155,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Flossie Walter</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -129,7 +178,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Amya Ryan</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -145,7 +201,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Lamar Klein</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -161,7 +224,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Meggie Hermann</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -177,7 +247,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Eriberto Bashirian</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -193,7 +270,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Joana Sporer</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -209,7 +293,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Flossie Walter</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -225,7 +316,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Amya Ryan</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -241,7 +339,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Lamar Klein</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -257,7 +362,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Meggie Hermann</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -273,7 +385,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Eriberto Bashirian</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -289,7 +408,14 @@ export default function MessagesScreen() {
                                 fontSize: 15,
                                 fontWeight: 'bold'
                             }}>Joana Sporer</Text>
-                            <Text>Lorem ipsum dolor sit amet consectetur...</Text>
+                            <Text
+                                numberOfLines={1}
+                                ellipsizeMode='tail'
+                                style={{
+                                    width: 280,
+                                }}>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt blanditiis iusto earum cupiditate impedit quas.
+                            </Text>
                         </View>
                     </View>
                 </TouchableOpacity>
@@ -301,6 +427,8 @@ export default function MessagesScreen() {
 const styles = StyleSheet.create({
     container: {
         padding: 20,
+        alignItems: 'center',
+        marginBottom: '18%'
     },
     card: {
         flexDirection: 'row',
@@ -311,28 +439,6 @@ const styles = StyleSheet.create({
         height: 40,
         marginRight: 10,
         borderRadius: 100
-    },
-    header: {
-        padding: 20,
-        paddingVertical: 0,
-        flexDirection: 'row',
-        height: 50,
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginBottom: 20,
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15
-    },
-    search: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        width: 200,
-        height: 35,
-        padding: 15,
-        paddingVertical: 0,
-        backgroundColor: '#B0B7BD',
-        borderRadius: 10,
-        borderRadius: 10
     },
 })
 

@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, StyleSheet, Image} from 'react-native'
+import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, StyleSheet, Image } from 'react-native'
 import React from 'react'
 
 export default function CoursesScreen() {
@@ -207,7 +207,9 @@ export default function CoursesScreen() {
                             width: 253,
                             fontSize: 15,
                             fontWeight: 'bold'
-                        }}>Управление стратегическими комуникациями</Text>
+                        }}>
+                            Управление стратегическими комуникациями
+                        </Text>
                     </View>
                 </TouchableOpacity>
             </SafeAreaView>
@@ -218,6 +220,7 @@ export default function CoursesScreen() {
 const styles = StyleSheet.create({
     container: {
         padding: 10,
+        marginBottom: '18%'
     },
     card: {
         flexDirection: 'row',
