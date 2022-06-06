@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, StyleSheet, Image} from 'react-native'
+import { View, Text, SafeAreaView, ScrollView, TouchableOpacity, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import { vh, vw } from 'react-native-expo-viewport-units'
 
@@ -212,7 +212,9 @@ export default function CoursesScreen() {
                             width: 253,
                             fontSize: 15,
                             fontWeight: 'bold'
-                        }}>Управление стратегическими комуникациями</Text>
+                        }}>
+                            Управление стратегическими комуникациями
+                        </Text>
                     </View>
                 </TouchableOpacity>
             </SafeAreaView>

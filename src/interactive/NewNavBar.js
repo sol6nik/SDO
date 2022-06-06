@@ -17,6 +17,7 @@ import Shedules_SVG from './../icons/tab-icons/timetable_icon.svg'
 
 import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import { Font } from 'expo'
 
 import { useNavigation } from '@react-navigation/native';
 
