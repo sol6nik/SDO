@@ -79,31 +79,11 @@ export default function MarksScreen() {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 20
-    },
-    header: {
         padding: 20,
-        paddingVertical: 0,
-        flexDirection: 'row',
-        height: 50,
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        marginBottom: 20,
-        borderBottomLeftRadius: 15,
-        borderBottomRightRadius: 15
-    },
-    search: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        width: 200,
-        height: 35,
-        padding: 15,
-        paddingVertical: 0,
-        backgroundColor: '#B0B7BD',
-        borderRadius: 10
+        marginBottom: '18%'
     },
     card: {
-        marginTop: 20,
+        marginTop: 15,
         height: 206,
         width: 330,
         elevation: 3,

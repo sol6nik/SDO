@@ -52,7 +52,7 @@ export default class Slider extends React.Component {
                         color: '#fff',
                         width: 95,
                         textAlign: 'center',
-                        borderRadius: 10,
+                        borderRadius: 50,
                         marginBottom: 5
                     }}>
                         {item.time}

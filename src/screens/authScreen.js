@@ -1,19 +1,28 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, Image, TouchableOpacity, TextInput } from "react-native"
+import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from "react-native"
 import CustomInput from "../customComponents/CustomInput";
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Feather } from '@expo/vector-icons';
+import {vh, vw} from 'react-native-expo-viewport-units'
 import axios from 'axios'
 import authScreenFunctions from '../js/authFunctions'
 import authFunctions from "../js/authFunctions";
 
+import AppLoading from "expo-app-loading";
+import { useFonts } from "expo-font";
+import Mospolytech_Logo_SVG from '../icons/auth-icons/mospolytech_logo_icon.svg'
+
 export default function Login({ navigation }) {
+
+    let [fontsLoaded] = useFonts({
+        'Gilroy-Regular': require('../../assets/fonts/TestFont.ttf')
+    })
 
     const [loginInput, setLoginInput] = useState('')
     const [passwordInput, setPasswordInput] = useState('')
 
     const login_attempt = async (data) => {
-        axios_cfg = { url: "https://mospolylms.herokuapp.com/api/v1/auth/login", method: "POST", data: { login: data.loginInput.toLowerCase(), password: data.passwordInput } }
+        let axios_cfg = { url: "https://mospolylms.herokuapp.com/api/v1/auth/login", method: "POST", data: { login: data.loginInput.toLowerCase(), password: data.passwordInput } }
         try {
             var anwser = await axios(axios_cfg);
             authScreenFunctions.setData(anwser.data)
@@ -24,26 +33,32 @@ export default function Login({ navigation }) {
         }
     }
 
+    if (!fontsLoaded) {
+        return <AppLoading />;
+    }    
+
     return (
         <SafeAreaView>
             <View style={styles.container}>
-                <View style={styles.header}>
-                    <Image source={require('../images/logo.png')} style={styles.logo} />
-                    <Text style={styles.logoHeader}>Московский политех</Text>
+                <View style={styles.logo_container}>
+                    <Mospolytech_Logo_SVG style={styles.logo} />
+                    <Text style={styles.logoHeader}>МОСКОВСКИЙ ПОЛИТЕХ</Text>
                 </View>
 
-                <View style={styles.enter}>
-                    <Text style={{ marginBottom: 25, fontSize: 25, fontWeight: "bold" }}>Авторизация</Text>
+                <View style={styles.main_container}>
+                    <Text style={{ marginBottom: 25, fontSize: 25, fontWeight: "bold",fontFamily:"Gilroy-Regular" }}>Вход</Text>
 
 
-                    <CustomInput label={'Email'} icon={
-                        <Feather
-                            name="mail"
-                            size={20}
-                            color="#B3B4BA"
-                            style={{ marginRight: 5 }}
-                        />
-                    }
+                    <CustomInput 
+                        label={'Логин или адрес электронной почты'} 
+                        icon={
+                            <Feather
+                                name="mail"
+                                size={20}
+                                color="#B3B4BA"
+                                style={{ marginRight: 5 }}
+                            />
+                        }
                         inputFunction={login => setLoginInput(login)}
                         keyboardType="email-address"
                     />
@@ -63,15 +78,15 @@ export default function Login({ navigation }) {
                         keyboardType="default"
                     />
 
-                    <TouchableOpacity style={styles.btnEnter} onPress={() => login_attempt({ loginInput, passwordInput })}>
-                        <Text style={{ color: '#FFFFFF' }}>Войти</Text>
+                    <TouchableOpacity style={styles.enter_button} onPress={() => login_attempt({ loginInput, passwordInput })}>
+                        <Text style={{ color: '#000000' }}>Вход</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ marginTop: 20 }}>
+                    <TouchableOpacity style={{ marginTop: 20,fontFamily:"Gilroy-Regular" }}>
                         <Text>Забыли логин или пароль?</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={{ marginTop: 20 }} onPress={() => {authFunctions.setGuestData();navigation.navigate('MainScreen')}}>
+                    <TouchableOpacity style={{ marginTop: 20,fontFamily:"Gilroy-Regular" }} onPress={() => {authFunctions.setGuestData();navigation.navigate('MainScreen')}}>
                         <Text>Зайти гостем</Text>
                     </TouchableOpacity>
                 </View>
@@ -81,19 +96,15 @@ export default function Login({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        marginTop: 50,
-        padding: 20
-    },
-    header: {
+    logo_container: {
+        marginTop: vh(14.49),
         alignItems: 'center',
         justifyContent: 'center',
     },
-
     logo: {
         marginBottom: 10,
-        width: 107,
-        height: 107
+        width: vw(25.64),
+        height: vw(25.64)
     },
     logoHeader: {
         width: 219,
@@ -102,16 +113,18 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textTransform: 'uppercase'
     },
-    enter: {
-        marginTop: 140,
+    main_container: {
+        marginTop: vh(14.97),
         height: 420,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#FFFFFF',
+        borderRadius: 35,
     },
-    btnEnter: {
+    enter_button: {
         width: 350,
         height: 45,
-        backgroundColor: '#393A39',
+        backgroundColor: '#90B3E7',
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,

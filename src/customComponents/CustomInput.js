@@ -13,7 +13,7 @@ export default function InputFields({ icon, label, keyboardType, isPassword, inp
             height: 50,
             paddingLeft: 15,
             borderRadius: 10,
-            backgroundColor: '#FFFFFF'
+            backgroundColor: '#F0F0F0'
         }}>
             {icon}
             <TextInput

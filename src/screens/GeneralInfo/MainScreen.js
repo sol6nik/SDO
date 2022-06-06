@@ -15,22 +15,35 @@ export default function MainScreen() {
                 <View style={styles.container}>
 
                     <View>
-                        <Text style={{ marginTop: 20, fontSize: 25, fontWeight: 'bold' }}>Следующая пара</Text>
+                        <Text style={{
+                            marginTop: 30,
+                            fontSize: 25,
+                            fontWeight: 'bold'
+                        }}>
+                            Следующая пара
+                        </Text>
                         <Slider />
                     </View>
 
                     <View>
-                        <Text style={{ marginTop: 20, fontSize: 25, fontWeight: 'bold' }}>Домашняя работа</Text>
+                        <Text style={{
+                            marginTop: 30,
+                            fontSize: 25,
+                            fontWeight: 'bold'
+                        }}>
+                            Домашняя работа
+                        </Text>
                         <HW />
                     </View>
 
                     <View style={{ marginBottom: 15 }}>
                         <Text style={{
-                            marginTop: 20,
-                            marginLeft: 25,
+                            marginTop: 30,
                             fontSize: 25,
                             fontWeight: 'bold'
-                        }}>Курсы</Text>
+                        }}>
+                            Курсы
+                        </Text>
                         <SliderCourses />
                     </View>
                 </View>
@@ -42,7 +55,8 @@ export default function MainScreen() {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10
+        padding: 10,
+        marginBottom: '18%'
     },
     header: {
         padding: 20,
